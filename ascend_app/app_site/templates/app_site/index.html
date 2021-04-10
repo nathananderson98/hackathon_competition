@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-{% if data_to_display %}
-    <ul>
-    {% for item in persons %}
-        <li>item</li>
-    {% endfor %}
-    {% for item in recruiters %}
-        <li>item</li>
-    {% endfor %}
-    {% for item in companies %}
-        <li>item</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No data is available.</p>
-{% endif %}
-<br/>
-<h3><a href="http://127.0.0.1:8080/about/student/">student about</a></h3>
-<h3><a href="http://127.0.0.1:8080/about/company/">company about</a></h3>
-<h3><a href="http://127.0.0.1:8080/login/">login</a></h3>
-<h3><a href="http://127.0.0.1:8080/register/">sign up</a></h3>
-<h3><a href="http://127.0.0.1:8080/competitions/">View competition gallery</a></h3>
-</body>
+   <head>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+      <link href="../../static/css/main.css/" rel="stylesheet" />
+      <title>Home</title>
+   </head>
+   <body>
+    <div class="menu">
+        <div class="left-menu">
+            <a href="http://127.0.0.1:8080/"><img src="../../static/images/Ascend_Logo_white_on_blue.png"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light right-menu">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="http://127.0.0.1:8080/competitions/">Join now</a>
+              <a class="nav-item nav-link" href="http://127.0.0.1:8080/competitions/">Sign in</a>
+            </div>
+          </div>
+        </nav>
+    </div>
+   <div class="content-columns">
+       <div class="left-pane">
+           <div class="pane-header">
+               <h1>Market yourself with the #1 case competition platform</h1>
+               <p>forget about the resume drops, come show us what you're made of</p>
+           </div>
+           <div class="button-column">
+               <button type="button" class="btn btn-primary"><a href="http://127.0.0.1:8080/about/student/">Student</a></button>
+               <button type="button" class="btn btn-primary"><a href="http://127.0.0.1:8080/about/company/">Recruiter</a></button>
+           </div>
+       </div>
+       <div class="right-pane">
+           <img src="../../static/images/main_image.png">
+       </div>
+       <div class="footer"></div>
+   </div>
+
+
+   </body>
 </html>
+{#<h3><a href="http://127.0.0.1:8080/about/student/">student about</a></h3>#}
+{#<h3><a href="http://127.0.0.1:8080/about/company/">company about</a></h3>#}
+{#<h3><a href="http://127.0.0.1:8080/competitions/">login</a></h3>#}
+{#<h3><a href="http://127.0.0.1:8080/competitions/">sign up</a></h3>#}
+{#<h3><a href="http://127.0.0.1:8080/competitions/">View competition gallery</a></h3>#}

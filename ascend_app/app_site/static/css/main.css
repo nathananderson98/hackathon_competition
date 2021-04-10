@@ -1,0 +1,104 @@
+* {
+   font-family: Roboto, sans-serif;
+}
+
+.menu {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.column {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.left-title {
+   margin: 25px;
+}
+
+.left-title h4 {
+   font-weight: lighter;
+}
+
+.bottom-rows {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.row {
+   margin-top: 45px;
+}
+
+.left-menu {
+   display: inherit;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+.right-menu {
+   display: inherit;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+.content-columns {
+   margin-top: 100px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.left-pane,
+.right-pane {
+   width: 500px;
+}
+
+.signin-button {
+   padding: 7px;
+   color: blue;
+   box-shadow: 0 0 0 2pt blue;
+
+}
+
+.center {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+.button-column {
+   display: flex;
+   flex-direction: column;
+   width: 250px;
+   margin-top: 100px;
+}
+
+button {
+   margin:30px
+}
+
+form {
+   font-size: inherit;
+   width: 400px;
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+}
+
+.blue {
+   background-color: aqua;
+}
+
+.blue-text {
+   color: #74D4EA;
+}

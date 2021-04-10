@@ -2,19 +2,182 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="../../static/css/main.css/" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Competitions</title>
 </head>
 <body>
-<h3><a href="http://127.0.0.1:8080/">Home</a></h3>
-{% if competitions %}
-    <ul>
-    {% for comp in competitions %}
-        <li>comp</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No competitions to display.</p>
-{% endif %}
+    <div class="menu">
+        <div class="left-menu">
+            <a href="http://127.0.0.1:8080/"><img src="../../static/images/Ascend_Logo_white_on_blue.png"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light right-menu">
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="">My Competitions</a>
+                <a class="nav-item nav-link" href="">My Network</a>
+                <a class="nav-item nav-link" href="">My Profile</a>
+                <a class="nav-item nav-link" href="">My Messages</a>
+                <a class="nav-item nav-link" href="">Logout</a>
+            </div>
+          </div>
+        </nav>
+    </div>
+    <div class="left-title">
+        <h1>Browse competitions</h1>
+        <h4>See what competitions are trending</h4>
+    </div>
+    <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">Facebook QA Bug</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Software Development</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Company - Facebook</h6>
+                    <p class="card-text">Solve a bug in our QA department that deals with customer efficiency. Expect to get
+                        creative and work as a team.</p>
+                    <div class="bottom-rows">
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                            <p>Free Textbooks</p>
+                        </div>
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                            <p>6</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">Data Dash</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Data Science</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Company - ASCEND</h6>
+                    <p class="card-text">Identify trends in E-commerce data and apply them.</p>
+                    <div class="bottom-rows">
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                            <p>N/A</p>
+                        </div>
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                            <p>12</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">New Show Pitch</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Animation</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Company - TBS</h6>
+                      <p class="card-text">Create a title and animated title screen for a potential TV show on Cartoon Network.</p>
+                    <div class="bottom-rows">
+                    <div class="column">
+                         <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                        <p>Year Adobe Subscription</p>
+                    </div>
+                    <div class="column">
+                        <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                        <p>2</p>
+                    </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">Crack Internal Inefficiencies</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Economics</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Company - Vault</h6>
+                    <p class="card-text">We need a bright mind to problem solve inefficiencies in our company and provide solutions.</p>
+                    <div class="bottom-rows">
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                            <p>N/A</p>
+                        </div>
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                            <p>8</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">Stocks Portfolio Workup</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Finance</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Company - ASCEND</h6>
+                    <p class="card-text">Create a stocks portfolio workup for a new investor.</p>
+                    <div class="bottom-rows">
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                            <p>Free Textbooks</p>
+                        </div>
+                        <div class="column">
+                            <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                            <p>6</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="../../static/images/facebook.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title blue-text">Brooklyn Loft Job</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Industry - Interior Design</h6>
+                      <h6 class="card-subtitle mb-2 text-muted">Company - ASCEND</h6>
+                      <p class="card-text">Design a sleek interior for a Brooklyn loft.</p>
+                    <div class="bottom-rows">
+                    <div class="column">
+                         <h6 class="card-subtitle mb-2 text-muted">Prize</h6>
+                        <p>Internship</p>
+                    </div>
+                    <div class="column">
+                        <h6 class="card-subtitle mb-2 text-muted">Days left</h6>
+                        <p>3</p>
+                    </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+{#{% if competitions %}#}
+{#    <ul>#}
+{#    {% for comp in competitions %}#}
+{#        <li>comp</li>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p>No competitions to display.</p>#}
+{#{% endif %}#}
 
 </body>
 </html>

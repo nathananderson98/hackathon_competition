@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('competitions/', views.competition_gallery, name='competition_gallery'),
 
-    path('competitions/<int:pk>/', views.competition_detail, name='competition_detail'),
+    path('competitions/detail/', views.competition_detail, name='competition_detail'),
 
     path('competitions/create/', views.create_competition, name='create_competition'),
 

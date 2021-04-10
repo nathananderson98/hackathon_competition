@@ -13,16 +13,16 @@ from django.contrib.auth import authenticate, login
 
 def index(request):
     data = []
-    persons = [AuthUser.objects.all()]
-    companies = [Company.objects.all()]
-    data_to_display = False
-    if len(persons) > 0 or len(companies) > 0:
-        data_to_display = True
+    # # persons = [AuthUser.objects.all()]
+    # # companies = [Company.objects.all()]
+    # data_to_display = False
+    # if len(persons) > 0 or len(companies) > 0:
+    #     data_to_display = True
     template = 'app_site/index.html'
     context = {
-        'data_to_display': data_to_display,
-        'persons': persons,
-        'companies': companies,
+    #     'data_to_display': data_to_display,
+    #     'persons': persons,
+    #     'companies': companies,
     }
     return render(request, template, context)
 
@@ -60,10 +60,10 @@ def login_page(request):
             return redirect('student/portal/')
         else:
             # Unsuccessful Login
-            form = LoginForm()
+            form = LoginStudent()
             messages.success(request, 'Failed to login. Check your credentials and try again.')
     else:
-        form = LoginForm()
+        form = LoginStudent()
     template = 'app_site/welcome_student.html'
     context = {
         'form': form,
@@ -103,34 +103,29 @@ def company_portal(request):
 
 def welcome_student(request):
     if request.method == 'POST':
-        form = PersonForm(request.POST)
+        form = StudentForm(request.POST)
         if form.is_valid():
             user, password, first, last, email, phone, gender = get_person_data_form(form)
             study = form.cleaned_data['study']
             searching = form.cleaned_data['currently_searching']
-            new_student = AuthUser(username=user, password=password, first_name=first, last_name=last, email=email,
-                                   phone_number=phone, gender=gender, study=study, currently_searching=searching)
-            # Authenticate new user
-            user_exists = authenticate(request, username=user, password=password)
-            if user_exists is not None:
-                login(request, user_exists)
-                # account_sid = 'AC9804d93a0f1cdd98f902a7795c974ab5'
-                # auth_token = 'aa6300062f8d21a8afe97c35799cf332'
-                # client = Client(account_sid, auth_token)
-                # client.api.account.messages.create(
-                #     to="+14806656001",
-                #     from_="+12512999273",
-                #     body="New person created!\n"
-                #          f"{first} {last},\n"
-                #          f"contact: {phone} {email}\n"
-                #          f"date: {datetime.datetime.now()}\n"
-                #          f"info: {study}\n")
-                messages.success(request, 'Register was Successful!')
-                return redirect('student/portal/')
-            else:
-                raise Exception('Something strange happened here.')
+            user = Student(username=user, password=password, first_name=first, last_name=last, email=email,
+                           phone_number=phone, gender=gender, study=study, currently_searching=searching)
+            user.save()
+            # account_sid = 'AC9804d93a0f1cdd98f902a7795c974ab5'
+            # auth_token = 'aa6300062f8d21a8afe97c35799cf332'
+            # client = Client(account_sid, auth_token)
+            # client.api.account.messages.create(
+            #     to="+14806656001",
+            #     from_="+12512999273",
+            #     body="New person created!\n"
+            #          f"{first} {last},\n"
+            #          f"contact: {phone} {email}\n"
+            #          f"date: {datetime.datetime.now()}\n"
+            #          f"info: {study}\n")
+            messages.success(request, 'Register was Successful!')
+            return redirect('student/portal/')
     else:
-        form = PersonForm()
+        form = StudentForm()
     template = 'app_site/welcome_student.html'
     context = {
         'form': form,
@@ -162,8 +157,8 @@ def welcome_company(request):
             if recruiter_form.is_valid():
                 user, password, first, last, email, phone, gender = get_person_data_form(recruiter_form)
                 company = recruiter_form.cleaned_data['associated_company']
-                recruiter = AuthUser(username=user, password=password, first_name=first, last_name=last, email=email,
-                                      phone_number=phone, gender=gender, associated_company=company, is_student=False)
+                recruiter = Recruiter(username=user, password=password, first_name=first, last_name=last, email=email,
+                                      phone_number=phone, gender=gender, associated_company=company)
                 recruiter.save()
                 message = 'Recruiter successfully registered!'
                 messages.success(request, message)

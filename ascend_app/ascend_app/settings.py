@@ -29,8 +29,7 @@ ALLOWED_HOSTS = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-AUTH_USER_MODEL = 'app_site.AuthUser'
-
+STATIC_URL = '/app_site/static/'
 # Application definition
 
 INSTALLED_APPS = [

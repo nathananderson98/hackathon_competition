@@ -7,14 +7,20 @@
 <body>
 {% if data_to_display %}
     <ul>
-    {% for item in data %}
+    {% for item in persons %}
+        <li>item</li>
+    {% endfor %}
+    {% for item in recruiters %}
+        <li>item</li>
+    {% endfor %}
+    {% for item in companies %}
         <li>item</li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No data is available.</p>
 {% endif %}
-<br>
+<br/>
 <h3><a href="http://127.0.0.1:8080/about/student/">student about</a></h3>
 <h3><a href="http://127.0.0.1:8080/about/company/">company about</a></h3>
 <h3><a href="http://127.0.0.1:8080/login/">login</a></h3>

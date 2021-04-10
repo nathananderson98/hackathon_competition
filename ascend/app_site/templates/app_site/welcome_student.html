@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - Student</title>
+</head>
+<body>
+    <h3>Welcome new Student</h3>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+
+{#<h3><a href="http://127.0.0.1:8080/student/">FIX: Go to portal</a></h3>#}
+</body>
+</html>

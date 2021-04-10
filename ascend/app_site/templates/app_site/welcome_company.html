@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome - Company</title>
+</head>
+<body>
+    <h3>Welcome new Company</h3>
+    <h3>Register Company:</h3>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ company_form }}
+        <button type="submit" value="Register Company">Submit</button>
+    </form>
+
+    <h3>Register Recruiter:</h3>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ recruiter_form }}
+        <button type="submit" value="Register Recruiter">Submit</button>
+    </form>
+
+</body>
+</html>

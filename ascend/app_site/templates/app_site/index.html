@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+{% if data_to_display %}
+    <ul>
+    {% for item in data %}
+        <li>item</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data is available.</p>
+{% endif %}
+<br>
+<h3><a href="http://127.0.0.1:8080/about/student/">student about</a></h3>
+<h3><a href="http://127.0.0.1:8080/about/company/">company about</a></h3>
+<h3><a href="http://127.0.0.1:8080/login/">login</a></h3>
+<h3><a href="http://127.0.0.1:8080/register/">sign up</a></h3>
+<h3><a href="http://127.0.0.1:8080/competitions/">View competition gallery</a></h3>
+</body>
+</html>
